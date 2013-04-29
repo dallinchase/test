@@ -33,7 +33,7 @@
       <file leaf-file-name="ch-survey-page.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ch-survey-page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="12" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.45081967">
+            <state line="61" column="0" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.40983605">
               <folding>
                 <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#6;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -72,8 +72,8 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$USER_HOME$/Desktop/adpopup-pro/demo/index.html" />
         <option value="$PROJECT_DIR$/bonus-video-page.html" />
-        <option value="$PROJECT_DIR$/ch-survey-page.html" />
         <option value="$PROJECT_DIR$/offer-popup.html" />
+        <option value="$PROJECT_DIR$/ch-survey-page.html" />
       </list>
     </option>
   </component>
@@ -201,14 +201,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1010" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16862327" sideWeight="0.8789238" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16862327" sideWeight="0.8789238" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12107623" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -374,7 +374,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ch-survey-page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="12" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.45081967">
+        <state line="61" column="0" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.40983605">
           <folding>
             <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#6;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
