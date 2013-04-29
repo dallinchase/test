@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>adPopup Pro - jQuery Version</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Ivor">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <link rel="stylesheet" href="../adpopup-pro/css/adpopup-pro.min.css">
+    
+    </head>
+    
+<body data-spy="scroll" id="top">
+
+<!-- Documentation Navbar -->
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container"> 
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+	<a class="brand" href="#">adPopup Pro - jQuery version</a> <!-- TIP: Change this for the name of your file -->
+     	<div class="nav-collapse">
+        <ul class="nav">
+              <li><a href="#top" class="active">Top</a></li>
+              <li><a href="#installation">Installation</a></li>
+              <li><a href="#ads">Ads</a></li>
+              <li><a href="#options">Options</a></li>
+          </ul>
+</div>
+	</div>
+		</div>
+			</div> <!-- End of Navbar -->
+
+<!-- Main Container Beginning -->			
+			
+<div class="container">
+    
+	<div class="masthead">
+	    <h1>adPopup Pro - jQuery Version - Documentation</h1>
+	    <p class="marketing-byline">A guide to installing and using the plugin.</a></p>
+	    <p>Show popups with, images, videos and more to a selective group of visitors.</p>
+	    <p class="download-info"> <a href="http://codecanyon.net/user/rikdevos/profile?ref=RikdeVos" class="btn btn-primary btn-large" target="_blank">Item Support</a> <a href="http://codecanyon.net/user/rikdevos/portfolio?ref=RikdeVos" class="btn btn-large" target="_blank">Product Site</a> </p>
+	</div> <!-- masthead -->
+	
+   <div id="intro">
+    <p class="highlight hero-unit">Thank you for purchasing my item. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/rikdevos/profile">here</a>. Thanks so much!</p>
+  </div> <!-- intro -->
+      
+<section id="installation">
+	<div class="page-header">
+	  <h1>Installation <small>Installing the plugin</small></h1>
+	</div>
+
+    <h3>Copy the Files</h3>
+    <p>Installing this plugin is really easy. In your download folder is a folder called <strong>adpopup-pro</strong>. Copy that folder and its contents to your webserver.</p>
+    <hr />
+
+    <div class="row">
+      <div class="span3">
+        <h3>Included Files</h3>
+        <p>This is a brief explanation of the purpose of each file. You can skip this if you want but I thought it was worth mentioning.</p>
+      </div>
+
+	<div class="span9 hopeaa">
+    <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>File Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>images/</code></td>
+            <td>The folder where all the graphics for the popup are located.</td>
+          </tr>s
+          <tr>
+            <td><code>js/ad-popup.js</code></td>
+            <td>Contains the jQuery plugin and all of its code.</td>
+          </tr>
+          <tr>
+            <td><code>css/style.css</code></td>
+            <td>Contains all of the styling for the popup.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="span3">
+  <h3>Adding the JS &amp; CSS</h3>
+  <p>The first thing you have to do is load the necessary Javascript and CSS files. Besides that you'll also need a copy of jQuery. Add the following code your the <strong>&lt;head&gt;</strong> of your website.<div class="alert alert-info"> <b>Important!</b> Keep in mind, that you may already have included jQuery and that you shouldn't include 2 copies.</div></p>
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+&lt;!-- Main Stylesheet --&gt;
+&lt;link rel="stylesheet" type="text/css" media="screen" href="popup-pro/css/popup-pro.min.css" /&gt;
+
+&lt;!-- jQuery (load only if needed) --&gt;
+&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- Main Javascript --&gt;
+&lt;script type="text/javascript" src="popup-pro/js/popup-pro.min.js"&gt;&lt;/script&gt;
+</pre>
+      </div>
+        </div>
+
+    <hr />
+
+<div class="row">
+    <div class="span3">
+  <h3>Displaying the Popup</h3>
+  <p>Displaying the popup on your site is as easy as it gets. The first thing you have to do is create an object of all of your different ads/popups. You can read more about this in the next chapter. The next thing you have to do is call the jQuery plugin, pass in all of the options and you're done. This is a simple example</p>
+  <p>In this particular example, the popup will cycle between 2 ads: a youtube video and an image, with all of the default options.</p>
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+&lt;script&gt;
+$(document).ready(function() {
+
+    var ads = {
+      'ad_1': {
+        'type': 'youtube',
+        'video': 'http://www.youtube.com/watch?v=NfkCRMipWpE',
+      },
+      'ad_2': {
+        'type': 'image',
+        'src': 'http://dribbble.s3.amazonaws.com/users/60166/screenshots/648718/origamibird.jpg',
+        'link': 'http://google.com',
+      }
+
+    }
+
+    $('body').adPopupPro({
+      ads: ads
+      /* other options here */
+    });
+  });
+&lt;/script&gt;
+</pre>
+      </div>
+        </div>
+  </section> <!-- Markup -->
+
+<section id="ads">
+    <div class="page-header">
+       <h1>Ads <small>Creating ads</small></h1>
+     </div>
+
+<div class="row">
+    <div class="span3">
+  <h3>Types</h3>
+  <p>The plugin allows you to add multiple ads and it will randomly cycle between them. This can be extremely handy in some cases. There are a few different types of ads you can have, here is a list of all of them:</p>
+  <p>When creating the object of the ads, the <code>type</code> of the ad should correspondent with the type of the ad, you can see a table here. The key of the object can be anything, as long as its unique.</p>
+</div>
+<div class="span9">
+        <table class="table table-bordered table-striped">
+              <thead>
+            <tr>
+                  <th>Type</th>
+                  <th>Parameters</th>
+
+                  <th>Description</th>
+                </tr>
+          </thead>
+              <tbody>
+                <tr>
+                  <td><code>html</code></td>
+                  <td><code>html</code></td>
+                  <td>This just places HTML in the popup. The parameter <code>html</code> should be the HTML that has to be placed in the popup.</td>
+                </tr>
+                <tr>
+                  <td><code>image</code></td>
+                  <td><code>src</code>, <code>link</code></td>
+                  <td>This places an image in the popup. The <code>src</code> attribute should be the URL to the image (it can be external) and the <code>link</code> attribute is an optional link that will be opened when the image is clicked.</td>
+                </tr>
+                <tr>
+                  <td><code>youtube</code></td>
+                  <td><code>video</code></td>
+                  <td>Embeds a YouTube video in the popup. The <code>video</code> attribute should be the URL to the YouTube video.</td>
+                </tr>
+                <tr>
+                  <td><code>iframe</code></td>
+                  <td><code>src</code></td>
+                  <td>Creates an iframe inside the popup with the attribute <code>src</code> as iframe source.</td>
+                </tr>
+                <tr>
+                  <td><code>jquery</code></td>
+                  <td><code>elem</code></td>
+                  <td>Appends the element with css-selector <code>elem</code> inside the popup. So <code>elem</code> should be something like: <code>#popup_text</code> or <code>.pp_html</code>.</td>
+                </tr>
+               </tbody>
+            </table>
+      </div>
+        </div>
+    <hr />
+    <div class="row">
+      <div class="span12">
+        <h3>Examples</h3>
+        <p>With this in mind, let's take a look on some example ad objects:</p>
+     </div>
+    </div>
+    <div class="row">
+      <div class="span6"> 
+<pre class="prettyprint linenums">
+{
+  'ad_1': {
+    type: 'html',
+    html: '&lt;strong&gt;This is an HTML ad, written in strong text&lt;/strong&gt;
+           You can pretty much &lt;a href="#"&gt;write anything&lt;/a&gt; in here.'
+  }
+}
+</pre>
+<pre class="prettyprint linenums">
+{
+  'some_ad': {
+    type: 'object',
+    elem: '#my_popup_ad'
+  },
+  'another': {
+    type: 'iframe',
+    src: 'http://google.com/'
+  }
+}
+</pre>
+      </div>
+      <div class="span6">
+<pre class="prettyprint linenums">
+{
+  'ad_1': {
+    type: 'html',
+    html: '&lt;strong&gt;This is an HTML ad, written in strong text&lt;/strong&gt;'
+  },
+  'ad_2': {
+    type: 'image',
+    src: 'http://example.com/image.png',
+    link: 'http://example.com'
+  },
+  'ad_3': {
+    type: 'youtube',
+    video: 'http://www.youtube.com/watch?v=G_G8SdXktHg'
+  },
+  'ad_4': {
+    type: 'image',
+    video: 'http://example.com/image_2.png'
+  },
+}
+</pre>
+      </div>
+        </div>
+        <hr />
+</section>
+
+      
+
+<section id="options">
+    <div class="page-header">
+       <h1>Options <small>Options for the popup</small></h1>
+     </div>
+
+<div class="row">
+    <div class="span3">
+  <h3>Options</h3>
+  <p>Here's a complete list of all the options, their default values and what they're for. Options should be given as an object and the order doesn't matter. You cannot define the same option twice.</p>
+  <pre class="prettyprint linenums">
+$('body').adPopupPro({
+
+ ads: {},
+ show_type: 'always',
+ show_chance: 1,
+ mobile: true,
+ tablets: true,
+ min_screen_size: '0x0',
+ internet_explorer: 'normal',
+ os: '',
+ cookie_id: '1234',
+ width: 400,
+ height: 300,
+ show_close_button: true,
+ close_button: 'dark',
+ popup_color: 'light',
+ popup_shadow: true,
+ overlay_opacity: 0.5,
+ overlay_color: 'light',
+ overlay_close: true,
+ escape_close: true,
+ auto_close_after: false
+
+});
+</pre>
+</div>
+<div class="span9">
+        <table class="table table-bordered table-striped">
+              <thead>
+            <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+          </thead>
+              <tbody>
+              	<tr>
+                  <td><strong>ads</strong></td>
+                  <td><code>object</code></td>
+                  <td><code>{}</code></td>
+                  <td>The ads that should be displayed in the popup(s) with their options. Read about ads in the previous chapter.</td>
+                </tr>
+                <tr>
+                  <td><strong>show_type</strong></td>
+                  <td><code>string</code></td>
+                  <td><code>"always"</code></td>
+                  <td>Set on which visits the popup should be displayed. Choose between <code>"always"</code>, <code>"first_visit"</code>, <code>"session"</code>, <code>"day"</code>, <code>"month"</code>, <code>"year"</code>, <code>"never"</code>, <code>"chance"</code>. When set to <code>"chance"</code>, set a chance in the option <code>show_chance</code></td>
+                </tr>
+                <tr>
+                  <td><strong>show_chance</strong></td>
+                  <td><code>int</code></td>
+                  <td><code>1</code></td>
+                  <td>Set the chance for how many out of one popups should be displayed. For example, when set to <code>20</code>, the chance will be 1/20 (5%) that the popup will be displayed. This option will only be enabled if the option <code>show_type</code> is set to <code>"chance"</code>.</td>
+                </tr>
+                <tr>
+                  <td><strong>mobile</strong></td>
+                  <td><code>bool</code></td>
+                  <td><code>true</code></td>
+                  <td>Choose to show or hide the popup from phones. When set to <code>false</code>, the popup will not be shown to mobile browsers. These include Android Phones, iPhones, iPod's and Blackberry's.</td>
+                </tr>
+                <tr>
+                  <td><strong>tablets</strong></td>
+                  <td><code>bool</code></td>
+                  <td><code>true</code></td>
+                  <td>Choose to show or hide the popup from phones. When set to <code>false</code>, the popup will not be shown to tablets. These currently only include iPad's.</td>
+                </tr>
+                <tr>
+                  <td><strong>min_screen_size</strong></td>
+                  <td><code>string</code></td>
+                  <td><code>"0x0"</code></td>
+                  <td>Set the minimum screen size browsers should have to display the popup. For example, when set to <code>"800x600"</code>, the popup will only show up if the width of the screen is greater than 800 and if the height of the screen is greater than 600, or inverted.</td>
+                </tr>
+                <tr><!-- 'normal', only_ie6_below', 'only_ie7_below', 'only_ie8_below', 'only_ie', 'no_ie' -->
+                  <td><strong>internet_explorer</strong></td>
+                  <td><code>string</code></td>
+                  <td><code>normal</code></td>
+                  <td>Choose what to do when the plugin recognizes an Internet Explorer user. Available option are: <code>"normal"</code>, <code>"only_ie6_below"</code>, <code>"only_ie7_below"</code>, <code>"only_ie8_below"</code>, <code>"only_ie"</code>, <code>"no_ie"</code>.</td>
+                </tr>
+                <tr><!-- 'normal', 'only_windows', 'no_windows', only_mac', 'no_mac', 'only_linux', 'no_linux' -->
+                  <td><strong>os</strong></td>
+                  <td><code>string</code></td>
+                  <td><code>"normal"</code></td>
+                  <td>Choose what to do when the plugin recognizes the operating system. This can be useful if you're showing an ad specifically for Windows, which evidentely can be hidden from Mac and Linux users. Available options are: <code>"normal"</code>, <code>"only_windows"</code>, <code>"no_windows"</code>, <code>"only_mac"</code>, <code>"no_mac"</code>, <code>"only_linux"</code>, <code>"no_linux"</code>.</td>
+                </tr>
+                <tr>
+                  <td><strong>cookie_id</strong></td>
+                  <td><code>string</code></td>
+                  <td><code>123</code></td>
+                  <td>This had to be a string without spaces, just numbers and letters. Everytime it changes, the cookies for everyone will reset and the popup will behaive like the user hasn't visited the site yet. I recommend to change this everytime you change the ads.</td>
+                </tr>
+                <tr>
+                  <td><strong>width</strong></td>
+                  <td><code>int</code></td>
+                  <td><code>400</code></td>
+                  <td>The width of the popup in pixels. Please don't make the popup too wide, as this may cause scrolling errors.</td>
+                </tr>
+                <tr>
+                  <td><strong>height</strong></td>
+                  <td><code>int</code></td>
+                  <td><code>300</code></td>
+                  <td>The height of the popup in pixels. Please don't make the popup too high, as scrolling problems may occur when this is done.</td>
+                </tr>
+                <tr>
+                  <td><strong>show_close_button</strong></td>
+                  <td><code>bool</code></td>
+                  <td><code>true</code></td>
+                  <td>Choose to show or hide the close button (cross) in the top-right corner of the popup.</td>
+                </tr>
+                <tr>
+                  <td><strong>close_button</strong></td>
+                  <td><code>string</code></td>
+                  <td><code>"dark"</code></td>
+                  <td>The color scheme for the close button. Choose between <code>"light"</code> and <code>"dark"</code>.</td>
+                </tr>
+                <tr>
+                  <td><strong>popup_color</strong></td>
+                  <td><code>string</code></td>
+                  <td><code>"light"</code></td>
+                  <td>The color scheme of the popup. Choose between <code>"light"</code> and <code>"dark"</code>.</td>
+                </tr>
+                <tr>
+                  <td><strong>popup_shadow</strong></td>
+                  <td><code>bool</code></td>
+                  <td><code>true</code></td>
+                  <td>Enable or disable the shadow behind the popup.</td>
+                </tr>
+                <tr>
+                  <td><strong>overlay_opacity</strong></td>
+                  <td><code>int</code></td>
+                  <td><code>0.5</code></td>
+                  <td>The opacity for the overlay behing the popup. Set it to <code>0</code> to disable the overlay.</td>
+                </tr>
+                <tr>
+                  <td><strong>overlay_color</strong></td>
+                  <td><code>string</code></td>
+                  <td><code>"dark"</code></td>
+                  <td>The color of the overlay. Choose between <code>"light"</code> and <code>"dark"</code>.</td>
+                </tr>
+                <tr>
+                  <td><strong>overlay_close</strong></td>
+                  <td><code>bool</code></td>
+                  <td><code>true</code></td>
+                  <td>Enable or disable closing the popup when the overlay is clicked.</td>
+                </tr>
+                <tr>
+                  <td><strong>escape_close</strong></td>
+                  <td><code>bool</code></td>
+                  <td><code>true</code></td>
+                  <td>Enable or disable closing the popup when the escape key on the keyboard is pressed.</td>
+                </tr>
+                <tr>
+                  <td><strong>auto_close_after</strong></td>
+                  <td><code>int|bool</code></td>
+                  <td><code>false</code></td>
+                  <td>Set the time is miliseconds (1,000ms = 1sec) after which the popup should close. Set it to <code>false</code> to disable the auto close feature.</td>
+                </tr>
+
+          </tbody>
+            </table>
+      </div>
+        </div>
+    <hr />
+    <div class="row">
+    	<div class="span12">
+        <h3>Examples</h3>
+	      <p>A few examples of options:</p>
+	   </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="span6">	
+<pre class="prettyprint linenums">
+$('body').adPopupPro({
+	ads: {/* ads here */},
+	width: 600,
+	height: 480
+});
+</pre>
+<pre class="prettyprint linenums">
+$('body').adPopupPro({
+	ads: {/* ads here */},
+	popup_color: 'dark',
+	overlay_color: 'dark',
+	close_button: 'light'
+});
+</pre>
+      </div>
+      <div class="span6">
+<pre class="prettyprint linenums">
+$('body').adPopupPro({
+	ads: {/* ads here */},
+	os: 'no_windows',
+	width: 160,
+	height: 90,
+	cookie_id: '31415',
+	mobile: false,
+	tablets: false,
+	escape_close: false,
+	close_button: false,
+	overlay_close: false,
+	auto_close_after: 4000
+});
+</pre>
+      </div>
+        </div>
+  </section>
+      <!-- Styles -->
+      
+
+
+      <hr />
+
+<div class="goodbye">
+    <p>Once again, thank you so much for purchasing this item. As I said at the beginning, I'd be glad to help you if you have any questions relating to this item. No guarantees, but I'll do my best to assist. If you have a more general question relating to the items on CodeCanyon, you might consider visiting the <a href="http://codecanyon.net/forums" target="_blank">forums</a> and asking your question in the "Item Discussion" section.</p>
+  </div>
+
+      <hr />
+
+<footer>
+    <p>&copy; <a href="http://rikdevos.com/">Rik de Vos</a> 2012</p>
+</footer>
+
+</div><!-- /container --> 
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/scripts.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-transition.js"></script> 
+<script src="assets/js/bootstrap-alert.js"></script> 
+<script src="assets/js/bootstrap-modal.js"></script> 
+<script src="assets/js/bootstrap-dropdown.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script> 
+<script src="assets/js/bootstrap-tab.js"></script> 
+<script src="assets/js/bootstrap-tooltip.js"></script> 
+<script src="assets/js/bootstrap-popover.js"></script> 
+<script src="assets/js/bootstrap-button.js"></script> 
+<script src="assets/js/bootstrap-collapse.js"></script>
+<script type="text/javascript" src="../adpopup-pro/js/adpopup-pro.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+
+  var ads = {
+    'ad1': {
+      'type': 'image',
+      'src': '../demo/images/ad1.png',
+      'link': 'http://rikdevos.com'
+    },
+    'ad2': {
+      'type': 'image',
+      'src': '../demo/images/ad2.png',
+      'link': 'http://rikdevos.com'
+    },
+    'ad3': {
+      'type': 'image',
+      'src': '../demo/images/ad3.png',
+      'link': 'http://rikdevos.com'
+    },
+    'ad4': {
+      'type': 'image',
+      'src': '../demo/images/ad4.png',
+      'link': 'http://rikdevos.com'
+    },
+    'ad5': {
+      'type': 'image',
+      'src': '../demo/images/ad5.png',
+      'link': 'http://rikdevos.com'
+    },
+    'ad6': {
+      'type': 'image',
+      'src': '../demo/images/ad6.png',
+      'link': 'http://rikdevos.com'
+    },
+    'ad7': {
+      'type': 'image',
+      'src': '../demo/images/ad7.png',
+      'link': 'http://rikdevos.com'
+    }
+
+  }
+
+	  $('body').adPopupPro({
+	    ads: ads,
+	    width: 600,
+	    height: 300
+	  });
+  });
+</script>
+</body>
+</html>
